@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Button from '@mui/material/Button';
+
 import BasicModal from 'components/BasicModal';
 import AddTodoForm from 'components/AddTodoForm';
 
@@ -21,6 +22,7 @@ export default function AppBar() {
       <Container>
         <Title>Todo List APP</Title>
         <Button
+          type="button"
           variant="contained"
           color="success"
           size="large"

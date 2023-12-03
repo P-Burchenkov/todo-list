@@ -1,9 +1,10 @@
-import { Form } from './AddTodoForm.styled';
-
 import { TextField, Button } from '@mui/material';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+
 import { addTodo } from 'redux/todoList/operations';
+
+import { Form } from './AddTodoForm.styled';
 
 export default function AddTodoForm({ closeModal }) {
   const [value, setValue] = useState('');
@@ -29,7 +30,7 @@ export default function AddTodoForm({ closeModal }) {
           setValue(e.target.value);
         }}
         type="text"
-        label="Todo-name"
+        label="todo-name"
         variant="outlined"
         value={value}
         fullWidth

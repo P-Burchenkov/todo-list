@@ -1,22 +1,24 @@
-import AppBar from './AppBar';
-import BasicContainer from './BasicContainer';
-import { Pagination, PaginationItem } from '@mui/material';
-import TodoCard from './TodoCard';
 import { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchAllTodo } from 'redux/todoList/operations';
-import { selectAllTodo } from 'redux/todoList/selectors';
+import { Pagination, PaginationItem } from '@mui/material';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+import AppBar from './AppBar';
+import BasicContainer from './BasicContainer';
+import TodoCard from './TodoCard';
+import Footer from './Footer';
+
+import { fetchAllTodo } from 'redux/todoList/operations';
+import { selectAllTodo } from 'redux/todoList/selectors';
+
 export const App = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const itemsPerPage = 10;
 
   const todoList = useSelector(selectAllTodo);
 
   const totalPages = Math.ceil(todoList.length / itemsPerPage);
-
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const currentItems = todoList.slice(startIndex, endIndex);
@@ -56,9 +58,10 @@ export const App = () => {
           size="large"
         />
       </BasicContainer>
+      <Footer />
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
