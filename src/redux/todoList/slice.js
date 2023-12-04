@@ -7,6 +7,8 @@ const initialState = {
   error: null,
 };
 
+// todo слайс, що створює і повертає типи екшенів, генератори екшенів та редюсер
+
 export const todoSlice = createSlice({
   name: 'todoList',
   initialState,

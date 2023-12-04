@@ -11,6 +11,7 @@ export default function AddTodoForm({ closeModal }) {
 
   const dispatch = useDispatch();
 
+  // функція, якя виконується при сабміті форми додавання todo
   const handleSubmit = e => {
     e.preventDefault();
     const data = {

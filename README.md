@@ -9,6 +9,17 @@
 та налаштування додаткових можливостей
 [зверніться до документації](https://facebook.github.io/create-react-app/docs/getting-started).
 
+# Технології
+
+- HTML
+- CSS
+- Java Script
+- REACT
+- Redux
+- Material UI
+- Axios
+- Emotion-styled
+
 ## Основні функції
 
 - Додавання нових завдань

@@ -1,3 +1,5 @@
+// палітра кольрів сайту
+
 const colors = {
   accentColor: '#1976d2',
   white: '#ffffff',

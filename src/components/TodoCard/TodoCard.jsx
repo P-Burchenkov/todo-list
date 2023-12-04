@@ -17,6 +17,7 @@ const label = { inputProps: { 'aria-label': 'isCompleted' } };
 const TodoCard = forwardRef(({ id, name, isCompleted }, ref) => {
   const dispatch = useDispatch();
 
+  // обробник події на checkbox, що змінює статус виконання todo
   const handleComplete = e => {
     const data = {
       id,
@@ -27,7 +28,8 @@ const TodoCard = forwardRef(({ id, name, isCompleted }, ref) => {
     dispatch(updateTodo(data));
   };
 
-  const handleDelete = e => {
+  // обробник події кнопки-іконки видалення todo
+  const handleDelete = () => {
     const data = {
       id,
       name,
@@ -41,6 +43,7 @@ const TodoCard = forwardRef(({ id, name, isCompleted }, ref) => {
       <Text isCompleted={isCompleted}>{name}</Text>
       <CheckBoxContainer>
         <FormGroup>
+          {/* контрольований checkbox */}
           <FormControlLabel
             control={
               <Checkbox

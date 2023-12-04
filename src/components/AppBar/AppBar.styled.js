@@ -8,7 +8,7 @@ export const Header = styled.header`
   justify-content: center;
   width: 100%;
   margin: 0;
-  height: 68px;
+  height: 15vh;
   ${mq.desktop} {
     height: 80px;
   }
